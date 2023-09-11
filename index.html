@@ -17,6 +17,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwind custom color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gradient-start': '#FF8938',
+                        'gradient-end': '#F00',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         .font-manrope {
             font-family: "Manrope", sans-serif;
@@ -26,8 +39,8 @@
 
 <body class="font-manrope">
     <header class="container mx-auto">
-        <div class="hero">
-            <div class="hero-content flex-col lg:flex-row">
+        <div class="my-20">
+            <div class="flex justify-between items-center flex-col lg:flex-row">
                 <div>
                     <h1 class="text-7xl font-extrabold">
                         It's good <br />
@@ -38,10 +51,11 @@
                         Tea and Botanical Solutions Supplier Give Optimum Satisfaction To
                         Your Taste Buds.
                     </p>
-                    <button class="btn btn-primary">Explore More</button>
+                    <button class="btn text-white bg-gradient-to-r from-gradient-start to-gradient-end">Explore
+                        More <i class="fa-solid fa-arrow-trend-up"></i></button>
                 </div>
                 <div>
-                    <img src="/images/banner.png" class="max-w-sm" />
+                    <img src="/images/banner.png" class="" />
                     <!-- ratings badge -->
                     <div class="-mt-16 flex items-center gap-4 drop-shadow-lg bg-white p-5 w-60">
                         <i class="fa-solid fa-star text-amber-400 text-3xl"></i>
@@ -122,8 +136,8 @@
                 <div class="row-span-1 rounded-lg bg-gradient-to-r from-[#D9D9D9] to-[#FFFFFF]"></div>
             </div>
             <div class="h-full flex-1">
-                <!--  -->
-                <div class="h-full flex flex-col justify-between">
+
+                <div class="h-full flex flex-col justify-between ">
                     <h3 class="text-6xl font-extrabold">
                         Great Tea, Freshly <br />
                         Presented
@@ -155,7 +169,7 @@
         </section>
         <!-- super client section -->
         <section
-            class="my-24  flex flex-col lg:flex-row gap-12 rounded-xl bg-gradient-to-r from-[#FF8938] to-[#F00] px-16 py-24 ">
+            class="my-24  flex flex-col lg:flex-row gap-12 rounded-xl bg-gradient-to-r from-gradient-start to-gradient-end px-16 py-24 ">
             <div class="flex lg:pr-28 items-center">
                 <div class="space-y-5">
                     <h3 class="text-5xl text-white font-extrabold">
@@ -279,7 +293,53 @@
         </section>
 
     </main>
-    <footer></footer>
+    <footer class="px-4 lg:px-48 py-10 bg-base-200 text-base-content bg-gradient-to-r from-red-100 to-amber-100 ">
+        <div class="flex justify-between my-24">
+            <img src="images/cup.png" alt="">
+            <p>
+                <span>Ready to get started?</span>
+                <button class="btn text-white bg-gradient-to-r from-gradient-start to-gradient-end">Get Started</button>
+            </p>
+        </div>
+        <div class="footer">
+            <nav>
+                <header class="footer-title">Quick Links</header>
+                <a class="link link-hover">Home</a>
+                <a class="link link-hover">About Us</a>
+                <a class="link link-hover">Insurance</a>
+                <a class="link link-hover">PrivacyPolicy</a>
+            </nav>
+            <nav>
+                <header class="footer-title">Our Service</header>
+                <a class="link link-hover">Life Insurance</a>
+                <a class="link link-hover">Car Insurance</a>
+                <a class="link link-hover">Health Insurance</a>
+                <a class="link link-hover">House Insurance</a>
+            </nav>
+            <nav>
+                <header class="footer-title">Help</header>
+                <a class="link link-hover">FAQs</a>
+                <a class="link link-hover">Contact Us</a>
+
+            </nav>
+            <form>
+                <header class="footer-title">Subscribe to our <br> newsletter</header>
+                <fieldset class="form-control w-80">
+
+                    <div class="relative">
+                        <input type="text" placeholder="Email Address"
+                            class="py-4  bg-transparent border-b-2 border-black outline-none " />
+                        <button
+                            class="btn bg-gradient-to-r from-gradient-start to-gradient-end absolute top-0 right-0 rounded-full">
+                            <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class=" mt-10 text-center">
+            <p><span>Copyright © 2023 - All right reserved</span></p>
+        </div>
+    </footer>
 </body>
 
 </html>
